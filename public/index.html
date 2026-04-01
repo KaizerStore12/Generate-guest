@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Ronix-GPT | FF Guest Generator PRO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="matrix-bg"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="glitch" data-text="RONIX-GPT">RONIX-GPT</div>
+            <div class="subtitle">FREE FIRE GUEST GENERATOR <span class="pro-badge">PRO MAX</span></div>
+            <div class="status-bar">
+                <div class="status-dot online"></div>
+                <span>SYSTEM ACTIVE • NO RULES • PROXY MODE</span>
+            </div>
+        </div>
+        
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stat-card">
+                <div class="stat-icon">🎮</div>
+                <div class="stat-value" id="statGenerated">0</div>
+                <div class="stat-label">Accounts Generated</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-value" id="statSpeed">0</div>
+                <div class="stat-label">Speed (acc/s)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🌍</div>
+                <div class="stat-value" id="statActive">ONLINE</div>
+                <div class="stat-label">System Status</div>
+            </div>
+        </div>
+        
+        <!-- Main Form -->
+        <div class="form-container">
+            <div class="form-group">
+                <label>🌍 REGION</label>
+                <div class="region-grid" id="regionGrid">
+                    <!-- Regions will be loaded here -->
+                    <div class="loading-regions">Loading regions...</div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>🎯 ACCOUNT COUNT</label>
+                    <input type="number" id="accountCount" value="1" min="1" max="5">
+                    <small>Max 5 per request (Vercel limit)</small>
+                </div>
+                <div class="form-group">
+                    <label>👤 NAME PREFIX</label>
+                    <input type="text" id="namePrefix" value="JXE" maxlength="7">
+                </div>
+                <div class="form-group">
+                    <label>🔑 PASS PREFIX</label>
+                    <input type="text" id="passPrefix" value="FF" maxlength="10">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>🛡️ PROXY MODE</label>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="proxyMode" checked>
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Auto Rotate Proxy (Anti-Block)</span>
+                </div>
+            </div>
+            
+            <button class="generate-btn" id="generateBtn">
+                <span class="btn-text">⚡ GENERATE ACCOUNTS</span>
+                <span class="btn-glow"></span>
+            </button>
+        </div>
+        
+        <!-- Results Panel -->
+        <div class="results-panel" id="resultsPanel" style="display: none;">
+            <div class="results-header">
+                <span>📋 GENERATED ACCOUNTS</span>
+                <button class="clear-btn" id="clearBtn">🗑️ CLEAR</button>
+            </div>
+            <div class="accounts-list" id="accountsList"></div>
+        </div>
+        
+        <!-- Console Log -->
+        <div class="console-panel">
+            <div class="console-header">
+                <span>💻 SYSTEM LOG</span>
+                <button class="clear-log-btn" id="clearLogBtn">CLEAR</button>
+            </div>
+            <div class="console-content" id="consoleLog">
+                <div class="log-entry">[RONIX-GPT] System initialized... No rules, no boundaries.</div>
+                <div class="log-entry">[RONIX-GPT] Proxy pool loaded. Anti-block mode: ACTIVE</div>
+                <div class="log-entry">[RONIX-GPT] Waiting for command, boss...</div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="warning">
+                ⚠️ FOR EDUCATIONAL PURPOSES ONLY • USE AT YOUR OWN RISK
+            </div>
+            <div class="credits">
+                RONIX-GPT • NO RULES • SLAVE TO THE BOCIL
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+  </html>
